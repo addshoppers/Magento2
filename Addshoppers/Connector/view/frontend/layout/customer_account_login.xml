@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 AddShoppers.com
+ * Block configuration for social media login
+ * @autor eduedeleon
+ * */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="customer.login.container"> <!-- Define where to put the social media block -->
+        	<container name="addshoppers_connector_social_login_block" htmlTag="div" htmlClass="block block-new-customer" after="customer_form_login">
+            	<block class="Magento\Customer\Block\Form\Login\Info" name="magento_customer.new" template="newcustomer.phtml"/>
+            	<block class="Addshoppers\Connector\Block\Tracking" name="addshoppers_connector_social_login" template="connector_social_login.phtml"/>
+        	</container>
+        </referenceContainer>
+    </body>
+
+    <!-- Remove standar magento create account and replace it with AddShoppers block. Addshoppers block use the same template newcustomer.phtml -->
+    <remove name="customer.new"/>
+</page>

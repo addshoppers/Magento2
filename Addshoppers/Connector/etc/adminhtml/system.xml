@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 AddShoppers.com
+ * FileDescription: File used to configure the admin panel section
+ * @autor eduedeleon
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <!-- Addshoppers Tab -->
+        <tab id="addshoppers" translate="label" sortOrder="300">
+            <label>AddShoppers</label>
+        </tab>
+
+        <!-- Connector section -->
+        <section id="addshoppers_connector" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Module</label>
+            <tab>addshoppers</tab> <!-- Tab where section is linked -->
+            <resource>Magento_Config::config</resource>
+            
+            <!-- Account Setting Group -->
+            <group id="account_settings" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            	<!-- Group configs -->
+                <label>Account Settings</label>
+                 <attribute type="expanded">1</attribute>
+                <comment><![CDATA[Please configure your AddShoppers account information.]]></comment>
+
+                <!-- Module enable -->
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                	<label>Enabled</label>
+                	<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <!-- API Key -->
+                <field id="api_key" translate="label" type="text" sortOrder="2"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API Key</label>
+                </field>
+
+                <!-- Shop Id -->
+                <field id="shop_id" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shop Id</label>
+                </field>
+            </group>
+
+            <!-- Dashboard -->
+            <group id="dashboard" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <!-- Group configs -->
+                <label>Addshoppers Dashboard </label>
+                <attribute type="expanded">1</attribute>
+                <comment><![CDATA[<a href="https://app.addshoppers.com/merchants" target="_blank" style="float:right; margin: -18px 0px 0px 0;">Open in new tab</a>]]></comment>
+
+                <!-- iFrame -->
+                <field id="iframe" translate="label" type="link" sortOrder="2"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Your Dashboard</label>
+                    <frontend_model>Addshoppers\Connector\Block\Adminhtml\System\Config\Iframe</frontend_model>
+                </field>
+            </group>
+
+             <!-- Social Media -->
+            <group id="socialmedia" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                <!-- Group configs -->
+                <label>Social Media Login </label>
+                <comment><![CDATA[Please enable the social media buttons you wish to add in the login section.]]></comment>
+
+                <!-- Facebook -->
+                <field id="facebook" translate="label" type="select" sortOrder="1"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <!-- Paypal -->
+                <field id="paypal" translate="label" type="select" sortOrder="2"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Paypal Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                 <!-- LinkedIn -->
+                <field id="linkedin" translate="label" type="select" sortOrder="3"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>LinkedIn Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field> 
+                
+                <!-- Google  -->
+                <field id="google" translate="label" type="select" sortOrder="4"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

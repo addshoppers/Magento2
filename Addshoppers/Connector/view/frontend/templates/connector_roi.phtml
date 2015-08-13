@@ -1,0 +1,18 @@
+<?php
+/**
+ * Copyright © 2015 AddShoppers.com
+ * @autor eduedeleon
+ * */
+?>
+<!-- Begin AddShoopers Roi Code-->
+<script type="text/javascript">
+    AddShoppersConversion = {
+        order_id: '<?php echo $this->getOrderId(); ?>',
+        value: '<?php echo $this->getAmount(); ?>'
+    };
+
+    var js = document.createElement('script'); js.type = 'text/javascript'; js.async = true; js.id = 'AddShoppers';
+	js.src = ('https:' == document.location.protocol ? 'https://shop.pe/widget/' : 'http://cdn.shop.pe/widget/') + 'widget_async.js#<?php echo $block->getHelper()->getShopId(); ?>';
+	document.getElementsByTagName("head")[0].appendChild(js);
+</script>
+<!-- End AddShoopers Roi Code-->

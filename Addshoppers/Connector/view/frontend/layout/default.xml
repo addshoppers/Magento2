@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 AddShoppers.com
+ * Block configuration for tracking snippet code
+ * @autor eduedeleon
+ * */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../Magento/Core/etc/layout_single.xsd">
+    <referenceContainer name="after.body.start"> <!-- Define where to put the traking code block -->
+        <block class="Addshoppers\Connector\Block\Tracking" name="addshoppers_connector_tracking" template="connector_tracking.phtml"/>
+    </referenceContainer>
+</layout>
