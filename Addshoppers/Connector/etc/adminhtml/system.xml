@@ -15,38 +15,56 @@
 
         <!-- Connector section -->
         <section id="addshoppers_connector" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
-            <label>Module</label>
+            <label>Settings</label>
             <tab>addshoppers</tab> <!-- Tab where section is linked -->
             <resource>Magento_Config::config</resource>
             
             <!-- Account Setting Group -->
             <group id="account_settings" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
-            	<!-- Group configs -->
+                <!-- Group configs -->
                 <label>Account Settings</label>
                  <attribute type="expanded">1</attribute>
                 <comment><![CDATA[Please configure your AddShoppers account information.]]></comment>
 
                 <!-- Module enable -->
                 <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
-                	<label>Enabled</label>
-                	<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Enable or disable AddShoppers integration.]]></comment>
                 </field>
 
                 <!-- API Key -->
                 <field id="api_key" translate="label" type="text" sortOrder="2"  showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>API Key</label>
+                    <comment><![CDATA[Get your API key in the AddShoppers Dashboard under Account Settings > API Secret.]]></comment>
                 </field>
 
                 <!-- Shop Id -->
                 <field id="shop_id" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Shop Id</label>
+                    <label>Site Id</label>
+                    <comment><![CDATA[Get your Site ID in the AddShoppers Dashboard under Site Configuration > Site ID.]]></comment>
+                </field>
+
+                <!-- Social Login -->
+                <field id="social_login" translate="label" type="select" sortOrder="4"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Social Login</label>
+                    <comment>
+                    <![CDATA[Enable social login to improve your conversion rates by allowing your customers to create accounts and login seamlessly.
+                    <br><br>
+                    In the AddShoppers Dashboard under Apps > Social Login select which social networks you wish to display and copy the &#60;div&#62; tags to your Magento theme where you want the buttons to appear.
+                    <br><br>
+                    Suggested locations: Login page, Checkout page
+                    <br><br>
+                    Please configure your AddShoppers account information. If you don’t have an AddShoppers account yet, create one below.    “create one below.” is an anchored link to the AddShoppers dashboard.]]>
+                    </comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
 
             <!-- Dashboard -->
             <group id="dashboard" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
                 <!-- Group configs -->
-                <label>Addshoppers Dashboard </label>
+                <label>AddShoppers Dashboard </label>
                 <attribute type="expanded">1</attribute>
                 <comment><![CDATA[<a href="https://app.addshoppers.com/merchants" target="_blank" style="float:right; margin: -18px 0px 0px 0;">Open in new tab</a>]]></comment>
 
@@ -54,37 +72,6 @@
                 <field id="iframe" translate="label" type="link" sortOrder="2"  showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Your Dashboard</label>
                     <frontend_model>Addshoppers\Connector\Block\Adminhtml\System\Config\Iframe</frontend_model>
-                </field>
-            </group>
-
-             <!-- Social Media -->
-            <group id="socialmedia" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
-                <!-- Group configs -->
-                <label>Social Media Login </label>
-                <comment><![CDATA[Please enable the social media buttons you wish to add in the login section.]]></comment>
-
-                <!-- Facebook -->
-                <field id="facebook" translate="label" type="select" sortOrder="1"  showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Facebook Login</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-
-                <!-- Paypal -->
-                <field id="paypal" translate="label" type="select" sortOrder="2"  showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Paypal Login</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-
-                 <!-- LinkedIn -->
-                <field id="linkedin" translate="label" type="select" sortOrder="3"  showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>LinkedIn Login</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field> 
-                
-                <!-- Google  -->
-                <field id="google" translate="label" type="select" sortOrder="4"  showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Google Login</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
         </section>

@@ -19,3 +19,8 @@ Install
     php bin/magento setup:upgrade
 
 4. Enable and configure Addshoppers Connector in Magento Admin under Stores/Configuration/Addshoppers
+
+5. Create a block in admin panel with id "addshoppers_social_login" and include this block in your theme files using the  following php snippet:
+    ```bash
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('addshoppers_social_login')->toHtml();?>
+    ```
