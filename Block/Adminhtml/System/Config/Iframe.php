@@ -1,24 +1,16 @@
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-// @codingStandardsIgnoreFile
+ * Copyright © 2015 AddShoppers.com
+ * @autor eduedeleon
+ * */
 
 namespace Addshoppers\Connector\Block\Adminhtml\System\Config;
 
 /**
- * Renderer for PayPal banner in System Configuration
- * @author      Magento Core Team <core@magentocommerce.com>
+ * Renderer for Iframe in System Configuration
  */
 class Iframe extends \Magento\Backend\Block\Template implements \Magento\Framework\Data\Form\Element\Renderer\RendererInterface
 {
-    /**
-     * @var string
-     */
-    protected $_template = 'Magento_Paypal::system/config/fieldset/hint.phtml';
-
     /**
      * Render fieldset html
      *
