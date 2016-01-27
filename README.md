@@ -14,7 +14,7 @@ Install
 2. Run the following commands to install the module:
 
 	```bash
-   		composer required addshoppers/magento2-connector 
+   		composer require addshoppers/magento2-connector
    		php bin/magento setup:upgrade
     ```
 
