@@ -6,13 +6,14 @@
  * @autor eduedeleon
  * */
 -->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	
     <body>
         <referenceContainer name="content"> <!-- Define where to put the roi code block -->
             <block class="Addshoppers\Connector\Block\Roi" name="addshoppers_connector_roi" template="connector_roi.phtml"/>
         </referenceContainer>
-    </body>
+	 </body>
 
-    <!-- Removing tracking code for success payment page -->
-    <remove name="addshoppers_connector_tracking"/>
+    <referenceBlock name="addshoppers_connector_tracking" remove="true"/>
+
 </page>
