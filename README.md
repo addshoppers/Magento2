@@ -97,8 +97,8 @@ Copy and paste the following code in the Content field:
 ```
 
 	
-	Include the Social Login Block in your Theme using the follwing PHP code:
-	(i.e If you want to add the social login in the customer login section, go to your theme_path/Customer/view/frontend/templates/form/login.phtml) 
+Include the Social Login Block in your Theme using the follwing PHP code:
+(i.e If you want to add the social login in the customer login section, go to your theme_path/Customer/view/frontend/templates/form/login.phtml) 
 
 ```bash
     <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('addshoppers_social_login')->toHtml();?>
