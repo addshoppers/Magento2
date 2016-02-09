@@ -3,7 +3,7 @@ Addshoppers_Connector
 
 Addshoppers Connector Magento2 extension
 
-Module integrates Addshoppers app with Magento 2
+Module integrates Addshoppers app with Magento 2.
 
 
 Install
