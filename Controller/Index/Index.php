@@ -102,10 +102,14 @@ class Index extends \Magento\Framework\App\Action\Action {
 		 
 		foreach($params as $key => $value)
 		{
-		    if($key == "signature")
-		        $signature = $value;
-		    else
-		    	$p[] = $key . "=" . $value;
+    		if($key == "signature")
+        		$signature = $value;
+    		else
+        		$p[] = $key . "=" . $value;
+    		$pos = strpos($key, "_email");
+    		if($pos){
+        		$urlemail = $value;
+    		}
 		}
 		asort($p);
 		$query = $AddShoppersSecret . implode($p);
@@ -117,7 +121,6 @@ class Index extends \Magento\Framework\App\Action\Action {
 
 		// Signature validated, this is a valid request... continue on
 		$urluser  = $this->getRequest()->getParam("asusrnm");
-		$urlemail = $this->getRequest()->getParam("aseml");
 		
 		//Checking params
 		if(!$urluser){
